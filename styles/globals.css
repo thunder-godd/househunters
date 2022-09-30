@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -12,7 +11,8 @@ a {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,3 +24,48 @@ a {
     background: black;
   }
 }
+
+.listings .grid-container {
+  border: 10px solid purple;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.listings .grid-item {
+  border: 1px solid blue;
+}
+
+.listing {
+  position: relative;
+  max-width: 19rem;
+}
+
+.listing .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.listing .img {
+  padding: 0.5rem;
+  min-width: 18rem;
+  max-height: 15rem;
+}
+
+.listing .arrow {
+  display: inline-block;
+  width: 24px;
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+}
+
+.listing .arrow-right {
+  right: 0;
+}
+/*# sourceMappingURL=globals.css.map */
