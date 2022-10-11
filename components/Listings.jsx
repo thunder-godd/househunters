@@ -10,7 +10,7 @@ const Listings = () => {
 		<section className="listings">
 			<div className="grid-container">
 				{listings.map((l) => (
-					<Listing />
+					<Listing key={l} />
 				))}
 			</div>
 		</section>

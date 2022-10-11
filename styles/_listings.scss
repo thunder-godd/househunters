@@ -2,15 +2,17 @@
 	// border: 10px solid green;
 
 	.grid-container {
-		border: 10px solid purple;
+		//border: 10px solid purple;
 		max-width: 1200px;
 		margin: 0 auto;
+
 		display: grid;
 		gap: 1rem;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	}
 	.grid-item {
-		border: 1px solid blue;
+		//border: 1px solid blue;
+		margin: auto;
 	}
 }
 .listing {
@@ -21,19 +23,21 @@
 	.slides {
 		display: flex;
 	}
-	.img {
-		padding: 0.5rem;
-		min-width: 18rem;
-		max-height: 15rem;
-	}
-	.arrow {
-		display: inline-block;
-		width: 24px;
-		position: absolute;
-		top: 50%;
-		z-index: 100;
-	}
-	.arrow-right {
-		right: 0;
-	}
+	// .img {
+	// 	border: 1px solid red;
+	// 	border-radius: 10px;
+	// 	padding: 0.5rem;
+	// 	min-width: 18rem;
+	// 	max-height: 15rem;
+	// }
+	// .arrow {
+	// 	// display: inline-block;
+	// 	// width: 24px;
+	// 	// position: absolute;
+	// 	// top: 30%;
+	// 	// z-index: 100;
+	// }
+	// .arrow-right {
+	// 	right: 0;
+	// }
 }

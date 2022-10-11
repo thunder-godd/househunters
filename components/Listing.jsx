@@ -8,9 +8,14 @@ import img4 from "../public/images/img4.jpg";
 import img5 from "../public/images/img5.jpg";
 import img6 from "../public/images/img6.jpg";
 import img7 from "../public/images/img7.jpg";
-import nxt from "../public/images/nxt.png";
-import prv from "../public/images/prv.png";
+import shr from "../public/images/share.png";
+import sav from "../public/images/save.png";
+
 import Image from "next/image";
+import Slider from "./Slider";
+import Surface from "./Surface";
+import Btn from "./Btn";
+
 const Listing = () => {
 	const [imgs, setImgs] = useState([
 		img0,
@@ -23,50 +28,40 @@ const Listing = () => {
 		img7,
 	]);
 
-	const [current, setCurrent] = useState(0);
-	const next = () => {
-		if (current != imgs.length - 1) setCurrent((state) => state + 1);
-		console.log(current);
-	};
-	const prev = () => {
-		if (current != 0) setCurrent((state) => state - 1);
-	};
-
 	return (
 		<article className="listing grid-item">
-			<div className="img-slider">
-				<span className="arrow arrow-left" onClick={(e) => prev(e)}>
-					<Image src={prv} alt="img" />
-				</span>
-				<div className="slides">
-					<div className="img">
-						<Image src={imgs[current]} alt="img" />
+			<Slider imgs={imgs} />
+			<Surface>
+				<div className="details">
+					<div className="flex justify-between">
+						<div className="title">Apartment in Komarock</div>
+						<div className="price">Ksh16,000 </div>
+					</div>
+					<div className=" flex justify-between">
+						Bedrooms<span>5</span>
+					</div>
+
+					<div className="rating flex justify-between">
+						Rating<span>95%</span>
+					</div>
+					{/* <div className="hunter">
+						<span className="avi">|</span>
+						<tag>@thunders</tag>
+					</div> */}
+					<div className=" flex my-2 mx-3">
+						<span className="w-5 h-5 ">
+							<Image src={shr} alt="share" />
+						</span>
+						<Btn variant="pri" size="sm">
+							<Link href="/property/:1">BOOK</Link>
+						</Btn>
+						<span className="w-5 h-5 ">
+							<Image src={sav} alt="share" />
+						</span>
 					</div>
 				</div>
-				<span className="arrow arrow-right" onClick={(e) => next(e)}>
-					<Image src={nxt} alt="img" layout="responsive" />
-				</span>
-			</div>
-			<div className="details">
-				<div className="title">Apartment in Komarock</div>
-				<div className="price">16,000ksh</div>
-				<div className="rating">70%</div>
-				<div className="hunter">
-					<span className="avi">|</span>
-					<tag>@thunders</tag>
-				</div>
-				<Link href="/listings/:1">
-					<button className="btn cta">BOOK</button>
-				</Link>
-			</div>
+			</Surface>
 		</article>
-	);
-};
-const Circles = () => {
-	return (
-		<div className="circles">
-			<span className="circle">|</span>
-		</div>
 	);
 };
 

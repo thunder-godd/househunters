@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@100;200;400;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 a {
@@ -26,7 +30,6 @@ a {
 }
 
 .listings .grid-container {
-  border: 10px solid purple;
   max-width: 1200px;
   margin: 0 auto;
   display: -ms-grid;
@@ -37,7 +40,7 @@ a {
 }
 
 .listings .grid-item {
-  border: 1px solid blue;
+  margin: auto;
 }
 
 .listing {
@@ -49,23 +52,5 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.listing .img {
-  padding: 0.5rem;
-  min-width: 18rem;
-  max-height: 15rem;
-}
-
-.listing .arrow {
-  display: inline-block;
-  width: 24px;
-  position: absolute;
-  top: 50%;
-  z-index: 100;
-}
-
-.listing .arrow-right {
-  right: 0;
 }
 /*# sourceMappingURL=globals.css.map */
