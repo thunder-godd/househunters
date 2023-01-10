@@ -7,8 +7,8 @@ const Listings = () => {
 		23,
 	]);
 	return (
-		<section className="listings">
-			<div className="grid-container">
+		<section>
+			<div className="grid grid-cols-4">
 				{listings.map((l) => (
 					<Listing key={l} />
 				))}

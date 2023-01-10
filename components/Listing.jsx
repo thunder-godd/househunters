@@ -29,7 +29,9 @@ const Listing = () => {
 	]);
 
 	return (
-		<article className="listing grid-item">
+		<Link href="/property/1">
+		<article className="m-3">
+			
 			<Slider imgs={imgs} />
 			<Surface>
 				<div className="details">
@@ -61,7 +63,9 @@ const Listing = () => {
 					</div>
 				</div>
 			</Surface>
+			
 		</article>
+		</Link>
 	);
 };
 

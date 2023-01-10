@@ -16,21 +16,18 @@ const Slider = ({ imgs, variant }) => {
 		setCurrent(id);
 	};
 	return (
-		<div className="container ">
-			<div className="slider ">
+		<div className="container border ">
+			<div className="slider border ">
 				<div className="img-slider relative">
 					<span
 						className="arrow inline-block w-6 absolute left-0 top-[50%] z-10"
 						onClick={(e) => prev(e)}>
 						<Image src={prv} alt="img" />
 					</span>
-					<div className="mb-2">
+					<div className="mb-2 border border">
 						<div
-							className={
-								variant != "lg"
-									? "rounded-lg overflow-hidden min-w-[18rem]"
-									: "rounded-lg overflow-hidden min-w-[18rem] max-w-xl max-h-[60%] mx-auto "
-							}>
+							className="rounded-lg overflow-hidden min-w-[18rem] max-w-xl max-h-[60%] mx-auto "
+							>
 							<Image
 								src={imgs[current]}
 								alt="img"
@@ -52,7 +49,7 @@ const Slider = ({ imgs, variant }) => {
 };
 const Thumbnails = ({ imgs, select }) => {
 	return (
-		<div className="thumbnails flex justify-evenly">
+		<div className="flex justify-evenly">
 			{imgs.map((img, id) => {
 				return (
 					<div

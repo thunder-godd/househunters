@@ -5,6 +5,13 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
+		extend: {
+			gridTemplateColumns: {
+      
+        '4': 'repeat(auto-fit, minmax(280px, 1fr))',
+
+      }
+		},
 		colors: {
 			black: "#232526",
 			dark: "#1E1E1E",
