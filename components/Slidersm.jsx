@@ -3,7 +3,7 @@ import { useState } from "react";
 import nxt from "../public/images/nxt.png";
 import prv from "../public/images/prv.png";
 import Image from "next/image";
-const Slider = ({ imgs, variant }) => {
+const Slidersm = ({ imgs, variant }) => {
 	const [current, setCurrent] = useState(0);
 	const next = () => {
 		if (current != imgs.length - 1) setCurrent((state) => state + 1);
@@ -24,13 +24,12 @@ const Slider = ({ imgs, variant }) => {
 						onClick={(e) => prev(e)}>
 						<Image src={prv} alt="img" />
 					</span>
-					<div className="mb-2">
-						<div className="relative rounded-xl overflow-hidden w-full max-h-[500px] mx-auto ">
+					<div className="mb-2 ">
+						<div className="rounded-lg overflow-hidden min-w-[18rem] max-w-xl max-h-[60%] mx-auto ">
 							<Image
 								src={imgs[current]}
 								alt="img"
-								objectFit="contain"
-
+								layout="responsive"
 								// height={variant == "sm" ? "" : "650px"}
 							/>
 						</div>
@@ -42,7 +41,7 @@ const Slider = ({ imgs, variant }) => {
 					</span>
 				</div>
 			</div>
-			<Thumbnails imgs={imgs} select={select} />
+			{variant === "lg" ? <Thumbnails imgs={imgs} select={select} /> : ""}
 		</div>
 	);
 };
@@ -62,4 +61,4 @@ const Thumbnails = ({ imgs, select }) => {
 		</div>
 	);
 };
-export default Slider;
+export default Slidersm;

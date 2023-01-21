@@ -3,7 +3,7 @@ const Btn = ({ variant, children }) => {
 		<div
 			className={
 				variant == "pri"
-					? "inline-block bg-orange rounded-lg text-black  mx-auto px-2"
+					? "inline-block bg-orange rounded-md text-black  mx-auto px-3"
 					: ""
 			}>
 			{children}

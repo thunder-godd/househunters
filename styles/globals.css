@@ -4,19 +4,20 @@
 @tailwind utilities;
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "Inter", sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: "Inter", sans-serif;
+	background-color: #1e1e1e;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -30,27 +31,27 @@ a {
 } */
 
 .listings .grid-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  gap: 1rem;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	max-width: 1200px;
+	margin: 0 auto;
+	display: -ms-grid;
+	display: grid;
+	gap: 1rem;
+	-ms-grid-columns: (minmax(300px, 1fr)) [auto-fit];
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .listings .grid-item {
-  margin: auto;
+	margin: auto;
 }
 
 .listing {
-  position: relative;
-  max-width: 19rem;
+	position: relative;
+	max-width: 19rem;
 }
 
 .listing .slides {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 /*# sourceMappingURL=globals.css.map */

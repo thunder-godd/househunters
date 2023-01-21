@@ -3,8 +3,8 @@ import TimePicker from "./TimePicker";
 import Btn from "./Btn";
 import Confirm from "./Confirm";
 import { useState } from "react";
-const Modal = () => {
-	const [showConfirm, setShowConform] = useState(false);
+import Input from "./Input";
+const Modal = ({ setShowModal }) => {
 	const [date, setDate] = useState("");
 	const [time, setTime] = useState("");
 	const getTime = (t) => {
@@ -19,10 +19,14 @@ const Modal = () => {
 		setShowConform(true);
 	};
 	return (
-		<section className="bg-dark rounded-md absolute top-[20%]  w-[80%] h-[75%] mx-[10%]  z-50  ">
-			<div className="my-2 mx-2 mt- text-center">
-				Pick a Date and Time to view the property
+		<section className="bg-dark rounded-md absolute top-[20%] left-[20%]  w-[60%] h-[75%] border  z-50  ">
+			<div
+				className="relative right-0 p-2"
+				onClick={(e) => setShowModal(false)}>
+				X
 			</div>
+			<div className="my-2 mx-2 mt- text-center">Schedule A Tour</div>
+
 			<div className="max-w-lg mx-auto">
 				<div className="my-2">
 					<MyDatePicker getDate={getDate} />
@@ -30,13 +34,18 @@ const Modal = () => {
 				<div className="my-2">
 					<TimePicker time={time} getTime={getTime} />
 				</div>
+				<div className="my-2">
+					<Input placeholder={"Phone"} />
+				</div>
+				<div className="my-2">
+					<Input placeholder={"Email"} />
+				</div>
 				<div className="my-4 mx-2 text-center">
 					<Btn variant="pri">
 						<button onClick={() => handleSubmit()}>Submit</button>
 					</Btn>
 				</div>
 			</div>
-			{showConfirm && <Confirm date={date} time={time} />}
 		</section>
 	);
 };

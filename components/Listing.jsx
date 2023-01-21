@@ -15,6 +15,7 @@ import Image from "next/image";
 import Slider from "./Slider";
 import Surface from "./Surface";
 import Btn from "./Btn";
+import Slidersm from "./Slidersm";
 
 const Listing = () => {
 	const [imgs, setImgs] = useState([
@@ -29,43 +30,41 @@ const Listing = () => {
 	]);
 
 	return (
-		<Link href="/property/1">
 		<article className="m-3">
-			
-			<Slider imgs={imgs} />
-			<Surface>
-				<div className="details">
-					<div className="flex justify-between">
-						<div className="title">Apartment in Komarock</div>
-						<div className="price">Ksh16,000 </div>
-					</div>
-					<div className=" flex justify-between">
-						Bedrooms<span>5</span>
-					</div>
+			<Slidersm imgs={imgs} />
+			<Link href="/property/1">
+				<Surface>
+					<div className="details">
+						<div className="flex justify-between">
+							<div className="title">Apartment in Komarock</div>
+							<div className="price">Ksh16,000 </div>
+						</div>
+						<div className=" flex justify-between">
+							Bedrooms<span>5</span>
+						</div>
 
-					<div className="rating flex justify-between">
-						Rating<span>95%</span>
-					</div>
-					{/* <div className="hunter">
+						<div className="rating flex justify-between">
+							Rating<span>95%</span>
+						</div>
+						{/* <div className="hunter">
 						<span className="avi">|</span>
 						<tag>@thunders</tag>
 					</div> */}
-					<div className=" flex my-2 mx-3">
-						<span className="w-5 h-5 ">
-							<Image src={shr} alt="share" />
-						</span>
-						<Btn variant="pri" size="sm">
-							<Link href="/property/:1">BOOK</Link>
-						</Btn>
-						<span className="w-5 h-5 ">
-							<Image src={sav} alt="share" />
-						</span>
+						<div className=" flex my-2 mx-3">
+							{/* <span className="w-5 h-5 ">
+								<Image src={shr} alt="share" />
+							</span> */}
+							<Btn variant="pri" size="sm">
+								<Link href="/property/1">Schechule tour</Link>
+							</Btn>
+							{/* <span className="w-5 h-5 ">
+								<Image src={sav} alt="share" />
+							</span> */}
+						</div>
 					</div>
-				</div>
-			</Surface>
-			
+				</Surface>
+			</Link>
 		</article>
-		</Link>
 	);
 };
 

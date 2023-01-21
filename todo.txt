@@ -1,0 +1,2 @@
+two sliders
+large slider 100 width
